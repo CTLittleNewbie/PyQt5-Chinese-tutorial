@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>Images/xue.gif</file>
+    <file>Images/1.png</file>
+    <file>Images/2.png</file>
+    <file>Images/3.png</file>
+    <file>Images/bg.png</file>
+  </qresource>
+</RCC>
