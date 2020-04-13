@@ -256,7 +256,7 @@ QPushButton:checked{
      </widget>
     </item>
     <item row="3" column="0" colspan="2">
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="register_btn">
       <property name="minimumSize">
        <size>
         <width>0</width>
@@ -269,6 +269,12 @@ QPushButton:checked{
 	color:rgb(255, 255, 255);
 	border-radius:5px;
 	font-size:20px;
+}
+QPushButton:hover{
+	background-color:rgb(255, 123, 220);	
+}
+QPushButton:pressed{
+	background-color:rgb(97, 24, 255);	
 }</string>
       </property>
       <property name="text">
@@ -353,7 +359,7 @@ QPushButton:checked{
    </hints>
   </connection>
   <connection>
-   <sender>pushButton</sender>
+   <sender>register_btn</sender>
    <signal>clicked()</signal>
    <receiver>Form</receiver>
    <slot>check_register()</slot>

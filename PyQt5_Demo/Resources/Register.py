@@ -90,8 +90,15 @@ class Ui_Form(object):
         self.formLayout.setContentsMargins(0, 0, 0, 0)
         self.formLayout.setObjectName("formLayout")
         self.label = QtWidgets.QLabel(self.layoutWidget)
+        font = QtGui.QFont()
+        font.setFamily("MV Boli")
+        font.setPointSize(10)
+        font.setBold(False)
+        font.setItalic(False)
+        font.setWeight(50)
+        self.label.setFont(font)
         self.label.setStyleSheet("QLabel{\n"
-"    color:rgb(255, 255, 255);    \n"
+"    color:rgb(98, 116, 90);    \n"
 "    font: 10pt \"MV Boli\";\n"
 "}")
         self.label.setObjectName("label")
@@ -107,7 +114,7 @@ class Ui_Form(object):
         self.formLayout.setWidget(0, QtWidgets.QFormLayout.FieldRole, self.lineEdit)
         self.label_3 = QtWidgets.QLabel(self.layoutWidget)
         self.label_3.setStyleSheet("QLabel{\n"
-"    color:rgb(255, 255, 255);    \n"
+"    color:rgb(98, 116, 90);    \n"
 "    font: 10pt \"MV Boli\";\n"
 "}")
         self.label_3.setObjectName("label_3")
@@ -123,7 +130,7 @@ class Ui_Form(object):
         self.formLayout.setWidget(1, QtWidgets.QFormLayout.FieldRole, self.lineEdit_3)
         self.label_2 = QtWidgets.QLabel(self.layoutWidget)
         self.label_2.setStyleSheet("QLabel{\n"
-"    color:rgb(255, 255, 255);    \n"
+"    color:rgb(98, 116, 90);    \n"
 "    font: 10pt \"MV Boli\";\n"
 "}")
         self.label_2.setObjectName("label_2")
@@ -137,16 +144,22 @@ class Ui_Form(object):
 "}")
         self.lineEdit_2.setObjectName("lineEdit_2")
         self.formLayout.setWidget(2, QtWidgets.QFormLayout.FieldRole, self.lineEdit_2)
-        self.pushButton = QtWidgets.QPushButton(self.layoutWidget)
-        self.pushButton.setMinimumSize(QtCore.QSize(0, 40))
-        self.pushButton.setStyleSheet("QPushButton{\n"
+        self.register_btn = QtWidgets.QPushButton(self.layoutWidget)
+        self.register_btn.setMinimumSize(QtCore.QSize(0, 40))
+        self.register_btn.setStyleSheet("QPushButton{\n"
 "    background-color:rgb(255, 195, 98);\n"
 "    color:rgb(255, 255, 255);\n"
 "    border-radius:5px;\n"
 "    font-size:20px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"    background-color:rgb(255, 123, 220);    \n"
+"}\n"
+"QPushButton:pressed{\n"
+"    background-color:rgb(97, 24, 255);    \n"
 "}")
-        self.pushButton.setObjectName("pushButton")
-        self.formLayout.setWidget(3, QtWidgets.QFormLayout.SpanningRole, self.pushButton)
+        self.register_btn.setObjectName("register_btn")
+        self.formLayout.setWidget(3, QtWidgets.QFormLayout.SpanningRole, self.register_btn)
         self.about_menu_btn.raise_()
         self.exit_menu_btn.raise_()
         self.reset_menu_btn.raise_()
@@ -158,7 +171,7 @@ class Ui_Form(object):
         self.about_menu_btn.clicked.connect(Form.about_lk)
         self.exit_menu_btn.clicked.connect(Form.exit_panel)
         self.reset_menu_btn.clicked.connect(Form.reset)
-        self.pushButton.clicked.connect(Form.check_register)
+        self.register_btn.clicked.connect(Form.check_register)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):
@@ -171,7 +184,7 @@ class Ui_Form(object):
         self.label.setText(_translate("Form", "账    号："))
         self.label_3.setText(_translate("Form", "密    码："))
         self.label_2.setText(_translate("Form", "确认密码："))
-        self.pushButton.setText(_translate("Form", "注册"))
+        self.register_btn.setText(_translate("Form", "注册"))
 import image_rc_rc
 
 

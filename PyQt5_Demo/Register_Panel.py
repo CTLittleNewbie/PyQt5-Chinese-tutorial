@@ -67,7 +67,7 @@ class RegisterPanel(QWidget, Ui_Form):
         注册按钮，当点击登陆按钮时向外界发射一个信号
         :return:
         """
-        self.register_account_pwd_signal.emit()
+        # self.register_account_pwd_signal.emit()
 
 
 if __name__ == "__main__":
